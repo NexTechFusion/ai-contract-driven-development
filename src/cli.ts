@@ -4,6 +4,7 @@ import { Command } from "commander";
 import chalk from "chalk";
 import { createInitCommand } from "./commands/init.js";
 import { createVerifyCommand } from "./commands/verify.js";
+import { createVerifyYamlCommand } from "./commands/verify-yaml.js";
 import { createReportCommand } from "./commands/report.js";
 
 const program = new Command();
@@ -18,6 +19,7 @@ program
 // Register commands
 program.addCommand(createInitCommand());
 program.addCommand(createVerifyCommand());
+program.addCommand(createVerifyYamlCommand());
 program.addCommand(createReportCommand());
 
 // Global options
